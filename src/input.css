@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div i {
+  @apply text-3xl text-slate-400;
+}
+
+.normal__link a {
+  @apply font-medium text-lg text-white hover:text-grays hover:scale-105 transition-all;
+}
+
+.sign__up {
+  @apply py-3 font-medium text-lg text-white  bg-cyan rounded-full hover:opacity-90 transition-opacity cursor-pointer hover:text-white;
+}

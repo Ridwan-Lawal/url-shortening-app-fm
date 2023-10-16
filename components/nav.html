@@ -1,0 +1,38 @@
+<nav class="flex flex-wrap">
+  <!-- logo and hamburger -->
+  <div class="hamburger__section flex w-full border justify-between py-4">
+    <!-- logo -->
+    <div>
+      <img src="./images/logo.svg" alt="" />
+    </div>
+    <!-- hamburger -->
+    <div class="menus">
+      <!-- open -->
+      <div class="menu__open cursor-pointer">
+        <i class="fa-solid fa-bars transition-transform duration-300"></i>
+      </div>
+      <!-- close -->
+      <div class="menu__close hidden">
+        <i class="fa-solid fa-xmark transition-transform duration-300"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- nav items -->
+  <div
+    class="rounded-3xl w-full transition-all top-16 duration-200 h-0 fixed overflow-y-hidden nav__items px-8 flex flex-col gap-8 bg-darkViolet text-center"
+  >
+    <!-- top section -->
+    <ul class="flex flex-col gap-6">
+      <li class="normal__link"><a href="">Features</a></li>
+      <li class="normal__link"><a href="">Pricing</a></li>
+      <li class="normal__link"><a href="">Resources</a></li>
+    </ul>
+
+    <!-- down section -->
+    <ul class="flex flex-col gap-8 border-t border-gray-600 pt-6">
+      <li class="normal__link"><a href="">Login</a></li>
+      <li class="sign__up"><a href="">Sign up</a></li>
+    </ul>
+  </div>
+</nav>
