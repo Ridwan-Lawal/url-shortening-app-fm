@@ -7,9 +7,9 @@ div i {
 }
 
 .normal__link a {
-  @apply font-medium text-lg text-white hover:text-grays hover:scale-105 transition-all;
+  @apply font-medium text-lg md:text-grayishViolet md:hover:text-darkViolet text-white hover:text-grays hover:scale-105 transition-all;
 }
 
 .sign__up {
-  @apply py-3 font-medium text-lg text-white  bg-cyan rounded-full hover:opacity-90 transition-opacity cursor-pointer hover:text-white;
+  @apply py-3 font-medium text-lg text-white  bg-cyan rounded-full md:rounded-3xl md:px-8 hover:opacity-90 transition-opacity cursor-pointer hover:text-white;
 }
