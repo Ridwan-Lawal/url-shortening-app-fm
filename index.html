@@ -27,7 +27,7 @@
       <header class="border-black overflow-hidden py-4">
         <!-- ============= Navigation bar ========= -->
         <nav
-          class="flex flex-wrap md:flex-nowrap items-center px-8 md:max-w-6xl mx-auto"
+          class="flex flex-wrap md:flex-nowrap items-center px-8 md:max-w-6xl mx-auto w-screen"
         >
           <!-- logo and hamburger -->
           <div
@@ -60,17 +60,21 @@
           >
             <!-- top section -->
             <ul class="flex flex-col gap-6 md:gap-7 md:flex-row">
-              <li class="normal__link"><a href="">Features</a></li>
-              <li class="normal__link"><a href="">Pricing</a></li>
-              <li class="normal__link"><a href="">Resources</a></li>
+              <li class="normal__link link">
+                <a href="#features">Features</a>
+              </li>
+              <li class="normal__link link"><a href="#features">Pricing</a></li>
+              <li class="normal__link link">
+                <a href="#shortenForm">Resources</a>
+              </li>
             </ul>
 
             <!-- down section -->
             <ul
               class="flex flex-col justify-between md:gap-10 items-center md:flex-row gap-8 border-t md:border-none border-gray-600 pt-6 md:pt-0"
             >
-              <li class="normal__link"><a href="">Login</a></li>
-              <li class="sign__up"><a href="">Sign up</a></li>
+              <li class="normal__link"><a href="#signUp">Login</a></li>
+              <li class="sign__up link"><a href="#signUp">Sign up</a></li>
             </ul>
           </div>
         </nav>
@@ -108,11 +112,11 @@
       </header>
 
       <!-- ==================================== MAIN ==================== -->
-      <main class="mt-44">
+      <main class="mt-44 main__section">
         <div class="bg-gray-100 pb-24 px-10">
           <!-- ============= lilnk entry ============ -->
           <!-- form sectin -->
-          <div class="relative -top-20 md:max-w-5xl mx-auto">
+          <div class="relative -top-20 md:max-w-5xl mx-auto" id="shortenForm">
             <div class="bg-darkViolet rounded-xl overflow-hidden">
               <div
                 class="bg-shorten-mobile md:bg-shorten-desktop bg-no-repeat bg-right-top py-9 px-8 md:py-12"
@@ -192,6 +196,7 @@
           <!--=========types of statistical features ============== -->
           <div
             class="grid grid-cols-1 md:max-w-6xl mx-auto md:grid-cols-3 gap-24 md:gap-10 mt-24 md:h-[350px]"
+            id="features"
           >
             <!-- ]===================  BRAND RECOGNITION ==== -->
             <section
@@ -253,7 +258,7 @@
               </div>
               <!-- feature heading -->
               <h3 class="text-veryDarkBlue -mt-4 text-2xl font-bold">
-                Detailed Records
+                Fully Customizable
               </h3>
               <!-- feature- text -->
               <p
@@ -268,7 +273,7 @@
         </div>
 
         <!--==========  boost section========== -->
-        <div class="bg-darkViolet">
+        <div class="bg-darkViolet" id="signUp">
           <div
             class="bg-boost-mobile md:bg-boost-desktop bg-no-repeat bg-right-top py-14 px-8 text-center space-y-6 md:space-y-8"
           >
@@ -279,7 +284,7 @@
               <button
                 class="py-3 font-bold text-lg px-10 text-white bg-cyan hover:bg-sky-300 rounded-3xl transition-colors cursor-pointer hover:text-white"
               >
-                Shorten It!
+                Get Started
               </button>
             </div>
           </div>
