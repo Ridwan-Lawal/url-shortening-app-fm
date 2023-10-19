@@ -26,5 +26,5 @@ div i {
 }
 
 .footer-section-head ul li {
-  @apply text-grays font-medium;
+  @apply text-grays font-medium cursor-pointer hover:text-gray-100 transition-colors;
 }
