@@ -1,11 +1,11 @@
-"use strict";
+import { stickyNav, mainCoords } from "./stickyNav.js";
 
 const nav = document.querySelector("nav");
 const menuClose = document.querySelector(".menu__close");
 const menuOpen = document.querySelector(".menu__open");
 const linkSection = document.querySelector(".link__section");
 const btnShorten = document.querySelector(".btn__shorten");
-const mainSection = document.querySelector(".main__section");
+
 // Toggling of the nav on mobile view
 // const toggleMenu = function (e, className) {
 //   e.target
@@ -60,25 +60,8 @@ const linkTemplate = function (data) {
 };
 
 // sticky nav
-const mainCoords = mainSection.getBoundingClientRect();
-console.log(mainCoords);
-
 window.addEventListener("scroll", (e) => {
-  if (window.scrollY > mainCoords.top) {
-    nav.classList.add("fixed", "bg-white", "top-0", "py-2", "z-10");
-
-    nav.classList.remove("md:max-w-6xl");
-  } else {
-    nav.classList.remove(
-      "fixed",
-      "bg-white",
-      "top-0",
-      "py-2",
-      "z-10",
-      "md:max-w-6xl"
-    );
-    nav.classList.add("md:max-w-6xl");
-  }
+  stickyNav(e);
 });
 
 // smooth scrolling
