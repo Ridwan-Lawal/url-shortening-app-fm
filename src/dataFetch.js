@@ -34,8 +34,8 @@ const linkTemplate = function (data, ogLink) {
   linkSection.insertAdjacentHTML("afterbegin", html);
 };
 
-// fetching data for the link
-const apiKey = "13a19f3bc81949a0bd6789056331b36b";
+// fetching data for the link inputed
+const apiKey = "5fbc223d4b2345c991d83f9bc2dd0058";
 export const getShortLink = async function (link) {
   try {
     const res = await fetch("https://api.rebrandly.com/v1/links", {
@@ -53,6 +53,7 @@ export const getShortLink = async function (link) {
     const data = await res.json();
     linkTemplate(data.shortUrl, link);
   } catch (err) {
+    console.log(err);
     alert(err);
   }
 };
