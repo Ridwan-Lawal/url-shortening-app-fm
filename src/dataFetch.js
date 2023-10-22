@@ -34,17 +34,25 @@ const linkTemplate = function (data, ogLink) {
   linkSection.insertAdjacentHTML("afterbegin", html);
 };
 
+// fetching data for the link
+const apiKey = "13a19f3bc81949a0bd6789056331b36b";
 export const getShortLink = async function (link) {
   try {
-    const res = await fetch(
-      `http://tinyurl.com/api-create.php?url=${encodeURIComponent(link)}`
-    );
+    const res = await fetch("https://api.rebrandly.com/v1/links", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: apiKey,
+      },
+      body: JSON.stringify({
+        destination: link,
+      }),
+    });
 
-    if (!res.ok) throw new Error("Something went wrong fetching links :(");
-
-    const data = await res.text();
-    linkTemplate(data, link);
+    if (!res.ok) throw new Error("Something went wrong fetching api");
+    const data = await res.json();
+    linkTemplate(data.shortUrl, link);
   } catch (err) {
-    console.log(err);
+    alert(err);
   }
 };
